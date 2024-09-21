@@ -6,7 +6,6 @@ namespace SuperShop.Data.Entities
 {
     public class Product : IEntity 
     {
-
         public int Id { get; set; }
 
         [Required]
@@ -22,7 +21,6 @@ namespace SuperShop.Data.Entities
         [Display(Name = "Last Purchase")]
         public DateTime? LastPurchase { get; set; }
 
-
         [Display(Name = "Last Sale")]
         public DateTime? LastSale { get; set; }
 
@@ -37,7 +35,5 @@ namespace SuperShop.Data.Entities
         public string ImageFullPath => ImageId == Guid.Empty
             ? $"https://supershoptpsi.azurewebsites.net/images/noimage.jpg"
             : $"https://supershoptpsi.blob.core.windows.net/products/{ImageId}";
-
-
     }   
 }
