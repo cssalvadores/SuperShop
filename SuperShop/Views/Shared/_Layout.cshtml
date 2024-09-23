@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - SuperShop</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:500,800" rel="stylesheet">
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
@@ -22,12 +23,15 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
 
                     <ul class="navbar-nav flex-grow-1">
+
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Products" asp-action="Index">Products</a>
-                        </li>                        
+                        </li>                  
+                        
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>  
@@ -37,6 +41,10 @@
                     <ul class="nav navbar-nav navbar-right">
                         @if (this.User.Identity.IsAuthenticated)
                         {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Orders" asp-action="Index">Orders</a>
+                            </li>
+
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="ChangeUser">@this.User.Identity.Name</a>                                                            
                             </li>
